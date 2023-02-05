@@ -8,3 +8,12 @@
    padding-bottom: 16px;
    padding-right: 18px;
 }
+
+@media  screen and(min-width:320px) {
+    .profile__title{
+        font-size: 27px;
+        line-height: 33px;
+        text-align: center;
+        
+    }
+  }

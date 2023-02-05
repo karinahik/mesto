@@ -3,3 +3,9 @@
     flex-direction: column;
     padding-left: 30px;
 }
+
+@media  screen and(min-width:320px) {
+    .profile__info{
+      
+    }
+  }

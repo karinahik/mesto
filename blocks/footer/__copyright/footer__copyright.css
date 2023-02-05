@@ -5,3 +5,9 @@
     padding: 67px 0 60px;
     margin: 0;
 }
+
+@media screen and (min-width:320px)and (max-width:550px){
+    .footer__copyright{
+        padding: 48px 19px 36px;
+    }
+}

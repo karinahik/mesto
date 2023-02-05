@@ -5,3 +5,11 @@
     color:  #ffffff;
     margin: 0;
 }
+
+@media  screen and(min-width:320px) {
+    .profile__text{
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+    }
+  }
