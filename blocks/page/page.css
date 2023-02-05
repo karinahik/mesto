@@ -3,6 +3,7 @@
     background: #000000;
     max-width: 918px;
     min-width: 320px;
+    padding: 0 19px 0 ;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -10,14 +11,3 @@
    
 }
 
-@media  screen and (min-width:320px) and (max-width:550px) {
-    .page {
-        padding: 0 19px;
-    }
-}
-
-@media  screen and (min-width:551px) and (max-width: 970px) {
-    .page {
-        padding: 0 19px;
-    }
-}
