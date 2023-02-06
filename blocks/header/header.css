@@ -3,3 +3,11 @@
     max-width: 880px;
     margin-top: 45px;
 }
+
+
+@media  screen  and (max-width:550px){
+    .header{
+        margin-top: 28px;
+        
+    }
+  }

@@ -3,3 +3,10 @@
     flex-direction: row;
     align-items: center;
 }
+
+@media  screen and (max-width:550px) {
+    .profile__cover{
+      display: grid;
+        
+    }
+  }
