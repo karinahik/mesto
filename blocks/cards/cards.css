@@ -9,3 +9,11 @@
     font-size: 0;
 
 }
+
+
+@media  screen  and (max-width:550px){
+    .cards{
+        margin: 0 19px;
+    
+    }
+  }
