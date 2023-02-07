@@ -1,0 +1,29 @@
+.profile__button-plus{
+    background-image: url(../../../images/plus.svg);
+    background-repeat: no-repeat;
+    background-color: black;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+    background-position: center;
+    
+}
+
+
+.profile__button-plus:hover{
+    opacity: 0.6;
+}
+
+@media screen and (max-width:550px){
+    .profile__button-plus{
+        width: 282px;
+        box-sizing: border-box;
+        
+    }
+  }
+
+

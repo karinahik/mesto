@@ -1,0 +1,19 @@
+.cards{
+    display: grid;
+    grid-template-columns:  repeat(auto-fit, minmax(282px, 1fr));
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 20px 17px;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+
+}
+
+
+@media  screen  and (max-width:550px){
+    .cards{
+        margin: 0 19px;
+    
+    }
+  }
