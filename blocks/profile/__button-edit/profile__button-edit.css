@@ -9,3 +9,7 @@ cursor: pointer;
 padding: 0;
 
 }
+
+.profile__button-edit:hover{
+    opacity: 0.6;
+}
