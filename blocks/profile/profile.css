@@ -19,10 +19,11 @@
 }
 
 @media screen and (max-width: 940px){
-
 .profile {
     flex-direction: column;
     max-width: 100%;
+    
+    
 }
 }
 

@@ -4,6 +4,7 @@
     flex-direction: column;
    
    
+   
 }
 
 @media  screen and(min-width:320px) and (max-width:550px) {
@@ -16,6 +17,16 @@
 
     }
 }
+
+@media screen and(min-width:551px) and (max-width:940px) {
+    .profile__info{
+      padding-right: 30px;
+
+    }
+}
+
+
+
 
 
 
