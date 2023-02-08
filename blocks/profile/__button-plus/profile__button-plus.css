@@ -26,4 +26,15 @@
     }
   }
 
+  @media screen and (min-width:551px) and (max-width: 940px){
+.profile__button-plus{
+    width: 282px;
+    background-size: 16px;
+    margin: 0 auto;
+    margin-top: 27px;
+}
+  }
+
+
+
 

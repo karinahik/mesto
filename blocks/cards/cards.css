@@ -17,3 +17,13 @@
     
     }
   }
+
+  @media screen and (max-width: 640px){
+
+.cards {
+    grid-template-columns: 1fr;
+}
+  }
+
+  
+    
