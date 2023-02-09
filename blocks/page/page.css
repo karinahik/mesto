@@ -1,0 +1,13 @@
+.page {
+    font-family: "Inter", "Arial", sans-serif ;
+    background: #000000;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-rendering: optimizeLegibility;
+
+
+}
+
+
