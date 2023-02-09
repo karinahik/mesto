@@ -1,7 +1,7 @@
 # Проект: Место
 
 
-**[Ссылка на проект](https://github.com/karinahik/mesto.git)**
+**[Ссылка на проект](https://karinahik.github.io/mesto/)**
 
 **Figma**
 
