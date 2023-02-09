@@ -5,4 +5,14 @@
     line-height: 22px;
     text-align: center;
     color: #FFFFFF;
+    padding: 14px 124px 18px 125px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    max-width: 358px;
+}
+
+.popup__save:hover{
+    opacity: 0.8;
+border-radius: 2px;
 }
