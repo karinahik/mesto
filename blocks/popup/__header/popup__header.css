@@ -5,3 +5,10 @@
     padding-bottom: 54px;
     margin: 0;
 }
+
+
+@media (max-width: 550px) {
+    .popup__header{
+      
+    }
+  }
