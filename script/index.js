@@ -12,7 +12,7 @@ const toggleActiveClass = (card) => {
   card.classList.toggle("card_liked");
 
   if (card.classList.contains("card_liked")) {
-    card.src = "./";
+    card.src = "./images/like.png";
   } else {
     card.src = "./images/Group.svg";
   }

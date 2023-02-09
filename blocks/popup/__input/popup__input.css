@@ -4,11 +4,13 @@
    border: none;
    outline: none;
    border-bottom: 1px solid #d9d9d9;
+   font-size: 14px;
+   line-height: 17px;
 }
 
 
   .popup__input:nth-child(2) {
-    margin-bottom: 48px;
+    margin-bottom: 42px;
   }
 
   @media (max-width: 550px) {

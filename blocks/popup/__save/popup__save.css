@@ -20,6 +20,8 @@ border-radius: 2px;
 
 @media (max-width: 550px) {
     .popup__save{
-      
+        font-size: 14px;
+        line-height: 17px;
+       
     }
   }
