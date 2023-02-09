@@ -6,6 +6,21 @@ const editButton = document.querySelector(".profile__button-edit");
 const closeButton = document.querySelector(".popup__close");
 const usernameInput = document.querySelector(".popup__input_name");
 const aboutUserInput = document.querySelector(".popup__input_about");
+const cardLike = Array.from(document.querySelectorAll(".card__like"));
+
+const toggleActiveClass = (card) => {
+  card.classList.toggle("card_liked");
+
+  if (card.classList.contains("card_liked")) {
+    card.src = "./";
+  } else {
+    card.src = "./images/Group.svg";
+  }
+};
+
+cardLike.forEach((card) =>
+  card.addEventListener("click", () => toggleActiveClass(card))
+);
 
 const openPopup = () => {
   document.body.style.overflow = "hidden";

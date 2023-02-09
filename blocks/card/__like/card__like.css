@@ -1,4 +1,4 @@
-.card__like{
-    
-}
+.card__like:hover {
+    opacity: 0.5;
+  }
 
