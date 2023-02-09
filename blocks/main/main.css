@@ -1,9 +1,23 @@
-.main{
-    display: block;
-}
 
-@media screen and (min-width:320px) {
-    .main{
-        flex-direction:column;  
+.main {
+    width: 100%;
+    display: block;
+    max-width: 880px;
+    margin: 0 auto;
+    
+  }
+  
+  @media screen and (min-width: 320px) {
+    .main {
+      flex-direction: column;
     }
-}
+  }
+  
+  @media (max-width: 1024px) {
+    .main {
+        max-width: none;
+    }
+  }
+
+
+

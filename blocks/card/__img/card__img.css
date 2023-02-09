@@ -1,13 +1,8 @@
 .card__img{
-    /*transform: matrix(-1, 0, 0, 1, 0, 0);*/
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     width: 100%;
 }
 
-@media  screen  and (max-width:550px){
-    .card__img{
-        
-    }
-  }
+
 

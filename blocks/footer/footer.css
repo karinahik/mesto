@@ -1,4 +1,13 @@
-.footer{
 
-}
+      .footer {
+        width: 100%;
+        max-width: 880px;
+        margin: 0 auto;
+      }
+      
+      @media (max-width: 1024px) {
+        .footer {
+          max-width: none;
+        }
+      }
 

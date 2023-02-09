@@ -1,0 +1,10 @@
+.popup__close-img{
+    background: none;
+}
+
+@media (max-width: 550px) {
+    .popup__close-img {
+      width: 20px;
+    
+    }
+  }
