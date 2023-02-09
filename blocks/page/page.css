@@ -2,12 +2,13 @@
     font-family: "Inter", "Arial", sans-serif ;
     background: #000000;
     box-sizing: border-box;
-    max-width: 918px;
-    min-width: 320px;
+    /*max-width: 918px;
+    min-width: 320px;*/
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     text-rendering: optimizeLegibility;
+
 
 }
 
