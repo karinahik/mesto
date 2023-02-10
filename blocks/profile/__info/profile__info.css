@@ -2,9 +2,17 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 500px;
    
    
    
+}
+
+
+@media  screen and (max-width:650px) {
+    .profile__info{
+        width: 250px;
+    }
 }
 
 @media  screen and(min-width:320px) and (max-width:550px) {

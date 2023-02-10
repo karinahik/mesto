@@ -3,7 +3,6 @@
 
 @import url(../pages/index.css);
 @import url(../blocks/page/page.css);
-@import url(../script/index.js);
 
 
 @import url(../blocks/header/header.css);
@@ -23,6 +22,7 @@
 @import url(../blocks/profile/__button-edit/profile__button-edit.css);
 @import url(../blocks/profile/__text/profile__text.css);
 @import url(../blocks/profile/__button-plus/profile__button-plus.css);
+@import url(../blocks/profile/__button-img/profile__button-img.css);
 
 
 @import url(../blocks/elements/elements.css);
