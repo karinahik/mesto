@@ -9,20 +9,19 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width:550px) {
+@media (max-width: 880px) {
   .profile {
+    padding: 45px 20px;
     flex-direction: column;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .profile {
     justify-content: center;
     margin: 42px 0 36px;
     padding: 0;
     text-align: center;
-  }
-}
-
-@media (max-width: 880px) {
-  .profile {
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 100%;
   }
 }
