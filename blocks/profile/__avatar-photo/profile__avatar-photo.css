@@ -3,5 +3,6 @@
     width: 120px;
     object-fit: cover;
     height: 120px;
+    justify-self: center;
 
 }
