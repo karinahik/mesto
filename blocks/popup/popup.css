@@ -7,11 +7,3 @@
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
-
-@media (max-width: 550px) {
-  .popup {
-    align-items: flex-start;
-    margin-top: 120px;
-  }
-}
