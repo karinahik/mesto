@@ -1,37 +1,35 @@
-.profile__button-plus{
-    background-color: black;
-    cursor: pointer;
-    padding: 14px 64px;
-    margin: 0;
-    border: 2px solid #ffffff;
-    border-radius: 2px;
-   
-  }
-    
+.profile__button-plus {
+  background-color: black;
+  cursor: pointer;
+  padding: 14px 64px;
+  margin: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
 
 
 
-.profile__button-plus:hover{
-    opacity: 0.6;
 }
 
-@media screen and (max-width:550px){
-    .profile__button-plus{
-        width: 282px;
-        box-sizing: border-box;
-        
-    }
-  }
 
-  @media screen and (min-width:551px) and (max-width: 940px){
-.profile__button-plus{
+
+
+.profile__button-plus:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width:550px) {
+  .profile__button-plus {
+    width: 282px;
+    box-sizing: border-box;
+
+  }
+}
+
+@media screen and (min-width:551px) and (max-width: 940px) {
+  .profile__button-plus {
     width: 282px;
     background-size: 16px;
     margin: 0 auto;
     margin-top: 27px;
-}
   }
-
-
-
-
+}

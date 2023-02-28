@@ -1,19 +1,21 @@
 .popup__close {
-    position: absolute;
-    top: -40px;
-    right: -45px;
-    cursor: pointer;
-    border: none;
-    background: none;
-  }
-  .popup__close:hover {
-    opacity: 0.5;
-  }
+  position: absolute;
+  top: -40px;
+  right: -45px;
+  cursor: pointer;
+  border: none;
+  background: none;
+
+}
+
+.popup__close:hover {
+  opacity: 0.5;
+}
 
 
-  @media (max-width: 550px) {
-    .popup__close {
-      top: -35px;
-      right: -5px;
-    }
+@media (max-width: 550px) {
+  .popup__close {
+    top: -35px;
+    right: -5px;
   }
+}
