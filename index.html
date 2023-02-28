@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./pages/index.css">
-    
-  
     <title>MESTO</title>
 </head>
 <body class="page">
@@ -27,6 +25,7 @@
                   <p class="profile__text">Исследователь океана</p>
               </div>
             </div>
+            
             <button class="profile__button-plus" type="button">
               <img class="profile__button-img" src="./images/plus.svg" alt="Плюс">
             </button>
@@ -82,13 +81,13 @@
             <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
 
-    <section class="popup">
+    <section class=" popup_type-profile">
       <div class="popup__container">
         <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
         <h2 class="popup__header">Редактировать профиль</h2>
         <form action="post" class="popup__form" name="popup-form">
           <input
-            class="popup__input "
+            class="popup__input"
             type="text"
             name="fullname"
             id="input-name"
@@ -107,6 +106,34 @@
         </form>
       </div>
     </section>
+
+    
+    <section class="popup_type_add-card">
+      <div class="popup__container">
+        <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
+        <h2 class="popup__header">Новое место</h2>
+        <form  action="post" class="popup__form" name="popup__add-card">
+          <input
+          class="popup__input"
+          type="text"
+          name ="mesto"
+          id="input-mesto"
+          placeholder="Название"
+          required
+          >
+          <input
+          class="popup__input"
+          type="url"
+          name="link"
+          placeholder="Ссылка на картинку"
+          id="input-link"
+          required
+          >
+          <button type="submit" class="popup__save">Создать</button>
+        </form>
+      </div>
+    </section>
+
     <script src="./script/index.js"></script>
 </body>
 </html>
