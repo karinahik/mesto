@@ -39,8 +39,12 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 
+@import url(../blocks/card/__template/card__template.css);
+
+
+
 @import url(../blocks/popup/popup.css);
-@import url(../blocks/popup/_type_profile/popup_type_profile.css);
+@import url(../blocks/popup/_type-profile/popup_type-profile.css);
 @import url(../blocks/popup/_type_add-card/popup_type_add-card.css);
 @import url(../blocks/popup/__card/popup__card.css);
 @import url(../blocks/popup/__container/popup__container.css);
