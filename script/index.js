@@ -8,18 +8,20 @@ const inputAbout = form.querySelector('#input-about');
 const profilePopup = document.querySelector('.popup_type-profile');
 const addCardPopup = document.querySelector('.popup_type_add-card');
 const editPlus = document.querySelector('.profile__button-plus');
-const templatecard = document.querySelector('#card__template');
+const templateCard = document.querySelector('#card__template');
 
 
 
+//  Open popup 
 const openPopup = (popup) => {
   popup.classList.remove('display');
   popup.classList.add('popup_opened');
 };
 
+//  Close popup
 const closePopup = () => {
-  addCardPopup.classList.remove("popup_opened");
-  profilePopup.classList.remove("popup_opened");
+  addCardPopup.classList.remove('popup_opened');
+  profilePopup.classList.remove('popup_opened');
 };
 
 
@@ -47,7 +49,6 @@ closeButtons[1].addEventListener('click', closePopup);
 // popup Open Buttons
 editButton.addEventListener('click', () => openPopup(profilePopup));
 editPlus.addEventListener('click', () => openPopup(addCardPopup));
-
 
 form.addEventListener('submit', updateData);
 
@@ -78,6 +79,38 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ];
+
+
+const inputPopup = () => {
+  const inputValue = document.querySelector('#input-link').value;
+  const inputMesto = document.querySelector('#input-mesto').value;
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
