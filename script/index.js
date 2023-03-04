@@ -8,7 +8,7 @@ const inputAbout = form.querySelector('#input-about');
 const profilePopup = document.querySelector('.popup_type-profile');
 const addCardPopup = document.querySelector('.popup_type_add-card');
 const editPlus = document.querySelector('.profile__button-plus');
-const templateCard = document.querySelector('#card__template');
+
 
 
 
@@ -23,7 +23,6 @@ const closePopup = () => {
   addCardPopup.classList.remove('popup_opened');
   profilePopup.classList.remove('popup_opened');
 };
-
 
 
 /*
@@ -80,12 +79,47 @@ const initialCards = [
   }
 ];
 
+const createCard = (item) => {
+  const templateCard = document.querySelector('#card__template');
+  const clone = templateCard.content.cloneNode(true);
+  const cardImg = clone.querySelector('.card__img');
+  const cardtext = clone.querySelector('.card__text');
+  const cardButton = clone.querySelector('.card__like-button');
+  const cardImgButton = clone.querySelector('.card__like');
+
+  cardImg.src = item.link;
+  cardImg.alt = item.name;
+  cardtext.textContent = item.name;
+
+  return clone;
+};
+
 
 const inputPopup = () => {
-  const inputValue = document.querySelector('#input-link').value;
-  const inputMesto = document.querySelector('#input-mesto').value;
+  const inputValue = document.querySelector("#input-link").value;
+  const inputMesto = document.querySelector("#input-mesto").value;
 
+
+  const item = {
+    name: inputMesto,
+    link: inputValue,
+  }
 };
+
+const divContainer = document.querySelector(".cards");
+
+const renderCard = (item) => {
+  const card = createCard(item);
+  divContainer.append(createCard(item));
+}
+
+initialCards.forEach((item) => renderCard(item))
+
+
+
+
+
+
 
 
 
