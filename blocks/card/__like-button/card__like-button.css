@@ -1,4 +1,4 @@
-.card__like-button{
+.card__like-button {
     width: 24px;
     background-color: transparent;
     border: none;
@@ -6,4 +6,5 @@
     background-repeat: no-repeat;
     cursor: pointer;
     padding: 0;
+
 }

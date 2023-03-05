@@ -1,15 +1,14 @@
-const form = document.querySelector('.popup__form');
+const profileForm = document.querySelector('#profile__form');
 const username = document.querySelector('.profile__title');
 const aboutUser = document.querySelector('.profile__text');
 const editButton = document.querySelector('.profile__button-edit');
 const closeButtons = Array.from(document.querySelectorAll(".popup__close"));
-const inputName = form.querySelector('#input-name');
-const inputAbout = form.querySelector('#input-about');
+const inputName = profileForm.querySelector('#input-name');
+const inputAbout = profileForm.querySelector('#input-about');
 const profilePopup = document.querySelector('.popup_type-profile');
 const addCardPopup = document.querySelector('.popup_type_add-card');
 const editPlus = document.querySelector('.profile__button-plus');
-
-
+const addCardForm = document.querySelector("#card__form");
 
 
 //  Open popup 
@@ -23,14 +22,6 @@ const closePopup = () => {
   addCardPopup.classList.remove('popup_opened');
   profilePopup.classList.remove('popup_opened');
 };
-
-
-/*
-const overlayClickHandler = (event) => {
-  if (event.target === event.currentTarget) {
-    closePopup();о
-  }
-};*/
 
 
 const updateData = (event) => {
@@ -49,7 +40,8 @@ closeButtons[1].addEventListener('click', closePopup);
 editButton.addEventListener('click', () => openPopup(profilePopup));
 editPlus.addEventListener('click', () => openPopup(addCardPopup));
 
-form.addEventListener('submit', updateData);
+
+profileForm.addEventListener('submit', updateData);
 
 
 const initialCards = [
@@ -79,6 +71,18 @@ const initialCards = [
   }
 ];
 
+// Add like
+
+const toggleLike = (cardButton, cardImgButton) => {
+  cardButton.classList.toggle('liked');
+
+  if (cardButton.classList.contains('liked')) {
+    cardImgButton.src = '../images/like.png';
+  } else {
+    cardImgButton.src = '../images/Group.svg';
+  }
+};
+
 const createCard = (item) => {
   const templateCard = document.querySelector('#card__template');
   const clone = templateCard.content.cloneNode(true);
@@ -90,6 +94,9 @@ const createCard = (item) => {
   cardImg.src = item.link;
   cardImg.alt = item.name;
   cardtext.textContent = item.name;
+
+  // Add like
+  cardButton.addEventListener('click', () => toggleLike(cardButton, cardImgButton));
 
   return clone;
 };
@@ -103,17 +110,33 @@ const inputPopup = () => {
   const item = {
     name: inputMesto,
     link: inputValue,
+
+
   }
+  renderCard(item);
+
 };
 
 const divContainer = document.querySelector(".cards");
 
 const renderCard = (item) => {
-  const card = createCard(item);
-  divContainer.append(createCard(item));
+  divContainer.prepend(createCard(item));
 }
 
 initialCards.forEach((item) => renderCard(item))
+
+addCardForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  inputPopup() // add cards
+  closePopup()
+});
+
+
+
+
+
+
+
 
 
 
