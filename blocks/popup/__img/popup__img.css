@@ -8,6 +8,6 @@
     transform: translate(-50%, -50%);
 }
 
-.popup__img.popup_opend {
+.popup__img.popup_opened {
     display: block;
 }

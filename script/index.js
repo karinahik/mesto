@@ -2,7 +2,7 @@ const profileForm = document.querySelector('#profile__form');
 const username = document.querySelector('.profile__title');
 const aboutUser = document.querySelector('.profile__text');
 const editButton = document.querySelector('.profile__button-edit');
-const closeButtons = Array.from(document.querySelectorAll(".popup__close"));
+const closeButtons = Array.from(document.querySelectorAll(".popup__close-img"));
 const inputName = profileForm.querySelector('#input-name');
 const inputAbout = profileForm.querySelector('#input-about');
 const profilePopup = document.querySelector('.popup_type-profile');
@@ -13,10 +13,11 @@ const popupImg = document.querySelector('.popup__img');
 
 
 
-//  Open popup 
+//  Open popup о
 const openPopup = (popup) => {
   popup.classList.remove('display');
   popup.classList.add('popup_opened');
+
 };
 
 //  Close popup
@@ -37,8 +38,7 @@ const updateData = (event) => {
 };
 
 // popup close Buttons
-closeButtons[0].addEventListener('click', closePopup);
-closeButtons[1].addEventListener('click', closePopup);
+closeButtons.forEach((btn) => btn.addEventListener("click", closePopup));
 
 // popup Open Buttons
 editButton.addEventListener('click', () => openPopup(profilePopup));
@@ -111,7 +111,9 @@ const createCard = (item) => {
     cardItem.remove();
   });
 
-  // ============= Open Img =============
+
+
+  // ================== Open Img =================
 
 
 
@@ -123,6 +125,7 @@ const createCard = (item) => {
     openPopup(popupImg);
     cardPhoto.src = event.target.src;
     headerImg.textContent = event.target.parentElement.querySelector('.card__text').textContent;
+
   });
 
 
