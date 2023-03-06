@@ -16,6 +16,7 @@ const addCardForm = document.querySelector("#card__form");
 const openPopup = (popup) => {
   popup.classList.remove('display');
   popup.classList.add('popup_opened');
+
 };
 
 //  Close popup
@@ -111,9 +112,16 @@ const createCard = (item) => {
   // ============= Open Img =============
 
 
+  const popupImg = document.querySelector('.popup__img');
+  const cardPhoto = document.querySelector('.popup__card-photo');
+  const headerImg = document.querySelector('.popup__header-img');
 
 
-
+  cardImg.addEventListener('click', (event) => {
+    openPopup(popupImg)
+    popupImg.src = event.currentTarget.closest('.card__img').src
+    headerImg.textContent = event.currentTarget.closest('.card__text').textContent = item.name
+  });
 
 
 
