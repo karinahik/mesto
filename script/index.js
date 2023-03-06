@@ -109,15 +109,7 @@ const createCard = (item) => {
   });
 
   // ============= Open Img =============
-  const openImg = document.querySelector('.card__close')
 
-
-  cardImg.addEventListener('click', (event) => {
-    openImg.classList.add('popup_opend')
-
-
-
-  });
 
 
 
