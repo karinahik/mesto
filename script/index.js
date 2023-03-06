@@ -10,19 +10,23 @@ const addCardPopup = document.querySelector('.popup_type_add-card');
 const editPlus = document.querySelector('.profile__button-plus');
 const addCardForm = document.querySelector("#card__form");
 
-
+const popupImg = document.querySelector('.popup__img');
 
 //  Open popup 
 const openPopup = (popup) => {
   popup.classList.remove('display');
   popup.classList.add('popup_opened');
 
+  popupImg.classList.add('popup_opened');
+  popupImg.classList.remove('display');
 };
 
 //  Close popup
 const closePopup = () => {
   addCardPopup.classList.remove('popup_opened');
   profilePopup.classList.remove('popup_opened');
+
+  popupImg.classList.remove('popup_opend')
 };
 
 
