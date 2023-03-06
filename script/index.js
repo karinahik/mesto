@@ -11,6 +11,7 @@ const editPlus = document.querySelector('.profile__button-plus');
 const addCardForm = document.querySelector("#card__form");
 
 
+
 //  Open popup 
 const openPopup = (popup) => {
   popup.classList.remove('display');
@@ -91,6 +92,7 @@ const createCard = (item) => {
   const cardButton = clone.querySelector('.card__like-button');
   const cardImgButton = clone.querySelector('.card__like');
 
+
   cardImg.src = item.link;
   cardImg.alt = item.name;
   cardtext.textContent = item.name;
@@ -98,7 +100,34 @@ const createCard = (item) => {
   // Add like
   cardButton.addEventListener('click', () => toggleLike(cardButton, cardImgButton));
 
+
+  //  Delete Card
+  const cardDelete = clone.querySelector('.card__delete');
+  cardDelete.addEventListener('click', (event) => {
+    const cardItem = event.target.closest('.card')
+    cardItem.remove();
+  });
+
+  // ============= Open Img =============
+  const openImg = document.querySelector('.card__close')
+
+
+  cardImg.addEventListener('click', (event) => {
+    openImg.classList.add('popup_opend')
+
+
+
+  });
+
+
+
+
+
+
+
+
   return clone;
+
 };
 
 
@@ -130,6 +159,17 @@ addCardForm.addEventListener('submit', (e) => {
   inputPopup() // add cards
   closePopup()
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
