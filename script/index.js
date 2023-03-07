@@ -12,7 +12,7 @@ const addCardForm = document.querySelector("#card__form");
 const popupImg = document.querySelector('.popup__img');
 const popupType = document.querySelector('.popup_type_img');
 
-const popupContainer = document.querySelector('.popup__container')
+
 
 //  Open popup 
 const openPopup = (popup) => {
@@ -132,7 +132,7 @@ const createCard = (item) => {
 
 
   cardImg.addEventListener('click', (event) => {
-    openPopup(popupOverlay);
+    openPopup(popupType);
     cardPhoto.src = event.target.src;
     headerImg.textContent = event.target.parentElement.querySelector('.card__text').textContent;
   });

@@ -9,5 +9,6 @@
   justify-content: center;
   opacity: 0;
   visibility: hidden;
-  transition: visibility 0.3s, opacity 0.3s linear;
+  transition: visibility 0.5s, opacity 0.5s linear;
+
 }
