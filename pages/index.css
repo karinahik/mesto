@@ -61,7 +61,7 @@
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__save/popup__save.css);
 
-@import url(../blocks/popup/_conatiner_type_img/popup_container_type_img.css);
+@import url(../blocks/popup/__conatiner_type-img/popup__container_type-img.css);
 
 @import url(../blocks/popup/__card-photo/popup__card-photo.css);
 @import url(../blocks/popup/__figure/popup__figure.css);
