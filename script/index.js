@@ -10,13 +10,18 @@ const addCardPopup = document.querySelector('.popup_type_add-card');
 const editPlus = document.querySelector('.profile__button-plus');
 const addCardForm = document.querySelector("#card__form");
 const popupImg = document.querySelector('.popup__img');
+const popupOverlay = document.querySelector('.popup__overlay');
 
 
 
-//  Open popup о
+
+//  Open popup 
 const openPopup = (popup) => {
   popup.classList.remove('display');
   popup.classList.add('popup_opened');
+
+  document.body.style.overflow = 'hidden'
+
 
 };
 
@@ -25,7 +30,9 @@ const closePopup = () => {
   addCardPopup.classList.remove('popup_opened');
   profilePopup.classList.remove('popup_opened');
 
-  popupImg.classList.remove('popup_opened')
+  popupOverlay.classList.remove("popup_opened");
+
+  document.body.style.overflow = 'visible'
 };
 
 
@@ -122,10 +129,9 @@ const createCard = (item) => {
 
 
   cardImg.addEventListener('click', (event) => {
-    openPopup(popupImg);
+    openPopup(popupOverlay);
     cardPhoto.src = event.target.src;
     headerImg.textContent = event.target.parentElement.querySelector('.card__text').textContent;
-
   });
 
 
