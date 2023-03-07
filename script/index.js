@@ -13,23 +13,17 @@ const popupImg = document.querySelector('.popup__img');
 const popupType = document.querySelector('.popup_type_img');
 
 
-
 //  Open popup 
 const openPopup = (popup) => {
   popup.classList.remove('display');
   popup.classList.add('popup_opened');
 
-  popup.querySelector('.popup__container').style.display = 'block';
   document.body.style.overflow = 'hidden'
 
 };
 
 //  Close popup
 const closePopup = () => {
-  addCardPopup.querySelector('.popup__container').style.display = 'none';
-  profilePopup.querySelector('.popup__container').style.display = 'none';
-  popupType.querySelector('.popup__container').style.display = 'none';
-
   addCardPopup.classList.remove('popup_opened');
   profilePopup.classList.remove('popup_opened');
 
