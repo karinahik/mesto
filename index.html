@@ -37,22 +37,34 @@
 
         <template id="card__template">
              <li class="card">
-              <img class="card__img" src="#" alt="Изображение">
-              <div class="card__description">
+                <img class="card__img" src="#" alt="Изображение">
+                <button class="card__delete" type="button"><img class="card__delete-img" src="./images/Trash.svg" alt="Удалить"></button>
+                <div class="card__description">
                 <h3 class="card__text"></h3>
                 <button class="card__like-button"  type="button"><img class="card__like" src="./images/Group.svg" alt="Изображение"></button>
               </div>
+               </li>
         </template>
         
         <footer class="footer">
             <p class="footer__copyright">© 2020 Mesto Russia</p>
     </footer>
+    
+<div class="popup popup_type_img">
+  <section class="popup__container container_type_img">
+  <div class="popup__figure">
+    <img class="popup__card-photo" src="#"  alt="Изображение">
+    <h2 class="popup__header-img"></h2>
+  </div>
+  <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
+  </section>
+  </div>
 
-    <section class="popup_type-profile">
+    <section class="popup popup_type-profile">
       <div class="popup__container">
         <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
         <h2 class="popup__header">Редактировать профиль</h2>
-        <form action="post" class="popup__form" name="popup-form">
+        <form action="post" class="popup__form" id="profile__form" name="popup-form">
           <input
             class="popup__input"
             type="text"
@@ -75,11 +87,11 @@
     </section>
 
     
-    <section class="popup_type_add-card">
+    <section class="popup popup_type_add-card">
       <div class="popup__container">
         <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
         <h2 class="popup__header">Новое место</h2>
-        <form  action="post" class="popup__form" name="popup__add-card">
+        <form  action="post" class="popup__form" id="card__form" name="popup__add-card">
           <input
           class="popup__input"
           type="text"
