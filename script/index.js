@@ -10,10 +10,9 @@ const addCardPopup = document.querySelector('.popup_type_add-card');
 const editPlus = document.querySelector('.profile__button-plus');
 const addCardForm = document.querySelector("#card__form");
 const popupImg = document.querySelector('.popup__img');
-const popupOverlay = document.querySelector('.popup__overlay');
+const popupType = document.querySelector('.popup_type_img');
 
-
-
+const popupContainer = document.querySelector('.popup__container')
 
 //  Open popup 
 const openPopup = (popup) => {
@@ -29,12 +28,12 @@ const openPopup = (popup) => {
 const closePopup = () => {
   addCardPopup.querySelector('.popup__container').style.display = 'none';
   profilePopup.querySelector('.popup__container').style.display = 'none';
-  popupImg.querySelector('.popup__container').style.display = 'none';
+  popupType.querySelector('.popup__container').style.display = 'none';
 
   addCardPopup.classList.remove('popup_opened');
   profilePopup.classList.remove('popup_opened');
 
-  popupOverlay.classList.remove("popup_opened");
+  popupType.classList.remove("popup_opened");
 
   document.body.style.overflow = 'visible'
 };
