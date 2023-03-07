@@ -91,9 +91,9 @@ const toggleLike = (cardButton, cardImgButton) => {
   cardButton.classList.toggle('liked');
 
   if (cardButton.classList.contains('liked')) {
-    cardImgButton.src = '../images/like.png';
+    cardImgButton.src = "../images/like.png";
   } else {
-    cardImgButton.src = '../images/Group.svg';
+    cardImgButton.src = "../images/Group.svg";
   }
 };
 
