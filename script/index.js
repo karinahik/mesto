@@ -24,22 +24,19 @@ const openPopup = (popup) => {
 
 //  Close popup
 const closePopup = (popup) => {
-
   popup.classList.remove('popup_opened');
 
   popupForm.reset();
   addCardForm.reset();
 
-
 };
-
 
 const updateProfileData = (event) => {
   event.preventDefault();
   username.textContent = inputName.value;
   aboutUser.textContent = inputAbout.value;
 
-  closePopup(event.target.closest('.popup'));
+  //closePopup(event.target.closest('.popup'));
 };
 
 // popup close Buttons
@@ -166,7 +163,7 @@ addCardForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
   addNewCard();
-  closePopup();
+  closePopup(addCardPopup);
 
   // addNewCard(closePopup(addCardPopup),
   //   addCardForm.reset()) // add cards
