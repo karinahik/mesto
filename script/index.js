@@ -12,6 +12,8 @@ const addCardForm = document.querySelector("#card__form");
 const popupImg = document.querySelector('.popup__img');
 const popupType = document.querySelector('.popup_type_img');
 
+const popupForm = document.querySelector('.popup__form');
+
 
 //  Open popup 
 const openPopup = (popup) => {
@@ -25,9 +27,9 @@ const closePopup = (popup) => {
 
   popup.classList.remove('popup_opened');
 
-  // addCardPopup.classList.remove('popup_opened');
-  // profilePopup.classList.remove('popup_opened');
-  // popupType.classList.remove("popup_opened");
+  popupForm.reset();
+  addCardForm.reset();
+
 
 };
 
@@ -162,7 +164,18 @@ initialCards.forEach((item) => renderCard(item))
 
 addCardForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  addNewCard() // add cards
-  closePopup('popup')
-  addCardForm.reset()
+
+  addNewCard();
+  closePopup();
+
+  // addNewCard(closePopup(addCardPopup),
+  //   addCardForm.reset()) // add cards
+
+
+
+
+
+
+
+
 });
