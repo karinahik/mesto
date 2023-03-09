@@ -26,13 +26,18 @@ const closePopup = (popup) => {
   popup.classList.remove('popup_opened');
 
   addCardForm.reset();
+
 };
+
+
 
 const updateProfileData = (event) => {
   event.preventDefault();
   username.textContent = inputName.value;
   aboutUser.textContent = inputAbout.value;
+  profilePopup.classList.remove('popup_opened');
 
+  event.target.reset();
 
 };
 
@@ -45,6 +50,8 @@ addcardButton.addEventListener('click', () => openPopup(addCardPopup));
 
 
 profileForm.addEventListener('submit', updateProfileData);
+
+
 
 
 const initialCards = [
