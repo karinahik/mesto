@@ -2,5 +2,6 @@
   display: flex;
   visibility: visible;
   opacity: 1;
+  overflow: visible;
 
 }

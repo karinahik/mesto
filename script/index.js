@@ -7,7 +7,7 @@ const inputName = profileForm.querySelector('#input-name');
 const inputAbout = profileForm.querySelector('#input-about');
 const profilePopup = document.querySelector('.popup_type-profile');
 const addCardPopup = document.querySelector('.popup_type_add-card');
-const editPlus = document.querySelector('.profile__button-plus');
+const addcardButton = document.querySelector('.profile__button-plus');
 const addCardForm = document.querySelector("#card__form");
 const popupImg = document.querySelector('.popup__img');
 const popupType = document.querySelector('.popup_type_img');
@@ -15,41 +15,40 @@ const popupType = document.querySelector('.popup_type_img');
 
 //  Open popup 
 const openPopup = (popup) => {
-  popup.classList.remove('display');
   popup.classList.add('popup_opened');
 
-  document.body.style.overflow = 'hidden'
 
 };
 
 //  Close popup
-const closePopup = () => {
-  addCardPopup.classList.remove('popup_opened');
-  profilePopup.classList.remove('popup_opened');
+const closePopup = (popup) => {
 
-  popupType.classList.remove("popup_opened");
+  popup.classList.remove('popup_opened');
 
-  document.body.style.overflow = 'visible'
+  // addCardPopup.classList.remove('popup_opened');
+  // profilePopup.classList.remove('popup_opened');
+  // popupType.classList.remove("popup_opened");
+
 };
 
 
-const updateData = (event) => {
+const updateProfileData = (event) => {
   event.preventDefault();
   username.textContent = inputName.value;
   aboutUser.textContent = inputAbout.value;
 
-  closePopup();
+  closePopup(event.target.closest('.popup'));
 };
 
 // popup close Buttons
-closeButtons.forEach((btn) => btn.addEventListener("click", closePopup));
+closeButtons.forEach((btn) => btn.addEventListener("click", evt => closePopup(evt.target.closest('.popup'))));
 
 // popup Open Buttons
 editButton.addEventListener('click', () => openPopup(profilePopup));
-editPlus.addEventListener('click', () => openPopup(addCardPopup));
+addcardButton.addEventListener('click', () => openPopup(addCardPopup));
 
 
-profileForm.addEventListener('submit', updateData);
+profileForm.addEventListener('submit', updateProfileData);
 
 
 const initialCards = [
@@ -81,13 +80,13 @@ const initialCards = [
 
 // Add like
 
-const toggleLike = (cardButton, cardImgButton) => {
-  cardButton.classList.toggle('liked');
+const toggleLike = (cardButtonLike, cardImgButtonLike) => {
+  cardButtonLike.classList.toggle('liked');
 
-  if (cardButton.classList.contains('liked')) {
-    cardImgButton.src = "./images/like.png";
+  if (cardButtonLike.classList.contains('liked')) {
+    cardImgButtonLike.src = "./images/like.png";
   } else {
-    cardImgButton.src = "./images/Group.svg";
+    cardImgButtonLike.src = "./images/Group.svg";
   }
 };
 
@@ -96,8 +95,8 @@ const createCard = (item) => {
   const clone = templateCard.content.cloneNode(true);
   const cardImg = clone.querySelector('.card__img');
   const cardtext = clone.querySelector('.card__text');
-  const cardButton = clone.querySelector('.card__like-button');
-  const cardImgButton = clone.querySelector('.card__like');
+  const cardButtonLike = clone.querySelector('.card__like-button');
+  const cardImgButtonLike = clone.querySelector('.card__like');
 
 
   cardImg.src = item.link;
@@ -105,7 +104,7 @@ const createCard = (item) => {
   cardtext.textContent = item.name;
 
   // Add like
-  cardButton.addEventListener('click', () => toggleLike(cardButton, cardImgButton));
+  cardButtonLike.addEventListener('click', () => toggleLike(cardButtonLike, cardImgButtonLike));
 
 
   //  Delete Card
@@ -138,7 +137,7 @@ const createCard = (item) => {
 };
 
 
-const inputPopup = () => {
+const addNewCard = () => {
   const inputValue = document.querySelector("#input-link").value;
   const inputMesto = document.querySelector("#input-mesto").value;
 
@@ -153,79 +152,17 @@ const inputPopup = () => {
 
 };
 
-const divContainer = document.querySelector(".cards");
+const cardsContainer = document.querySelector(".cards");
 
 const renderCard = (item) => {
-  divContainer.prepend(createCard(item));
+  cardsContainer.prepend(createCard(item));
 }
 
 initialCards.forEach((item) => renderCard(item))
 
 addCardForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  inputPopup() // add cards
-  closePopup()
+  addNewCard() // add cards
+  closePopup('popup')
+  addCardForm.reset()
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
