@@ -13,8 +13,6 @@ const popupImg = document.querySelector('.popup__img');
 const popupType = document.querySelector('.popup_type_img');
 
 
-
-
 //  Open popup 
 const openPopup = (popup) => {
   popup.classList.add('popup_opened');
@@ -36,8 +34,6 @@ const updateProfileData = (event) => {
   aboutUser.textContent = inputAbout.value;
   profilePopup.classList.remove('popup_opened');
 
-  event.target.reset();
-
 };
 
 // popup close Buttons
@@ -49,7 +45,6 @@ addCardButton.addEventListener('click', () => {
   openPopup(addCardPopup);
   addCardForm.reset();
 });
-
 
 
 profileForm.addEventListener('submit', updateProfileData);
@@ -137,8 +132,6 @@ const createCard = (item) => {
     headerImg.textContent = event.target.alt;
   });
 
-
-
   return clone;
 
 };
@@ -152,8 +145,6 @@ const addNewCard = () => {
   const item = {
     name: inputMesto,
     link: inputValue,
-
-
   }
   renderCard(item);
 
