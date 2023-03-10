@@ -133,7 +133,8 @@ const createCard = (item) => {
   cardImg.addEventListener('click', (event) => {
     openPopup(popupType);
     cardPhoto.src = event.target.src;
-    headerImg.textContent = event.target.parentElement.querySelector('.card__text').textContent;
+    cardPhoto.alt = event.target.alt;
+    headerImg.textContent = event.target.alt;
   });
 
 
