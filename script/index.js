@@ -7,7 +7,7 @@ const inputName = profileForm.querySelector('#input-name');
 const inputAbout = profileForm.querySelector('#input-about');
 const profilePopup = document.querySelector('.popup_type-profile');
 const addCardPopup = document.querySelector('.popup_type_add-card');
-const addcardButton = document.querySelector('.profile__button-plus');
+const addCardButton = document.querySelector('.profile__button-plus');
 const addCardForm = document.querySelector("#card__form");
 const popupImg = document.querySelector('.popup__img');
 const popupType = document.querySelector('.popup_type_img');
@@ -25,9 +25,8 @@ const openPopup = (popup) => {
 const closePopup = (popup) => {
   popup.classList.remove('popup_opened');
 
-  addCardForm.reset();
-
 };
+
 
 
 
@@ -46,7 +45,11 @@ closeButtons.forEach((btn) => btn.addEventListener("click", evt => closePopup(ev
 
 // popup Open Buttons
 editButton.addEventListener('click', () => openPopup(profilePopup));
-addcardButton.addEventListener('click', () => openPopup(addCardPopup));
+addCardButton.addEventListener('click', () => {
+  openPopup(addCardPopup);
+  addCardForm.reset();
+});
+
 
 
 profileForm.addEventListener('submit', updateProfileData);
