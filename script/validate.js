@@ -2,44 +2,32 @@ const formValidationConfig = {
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
     inputErrorClass: 'popup__input_type_error',
-    buttonClass: 'popup__save'
-
-
+    buttonSelector: '.popup__save',
+    buttonDisabledClass: 'popup__save-button_inactive',
 
 }
 
 
-function disableSubmit(event) {
-    event.preventDefault();
-}
-
-/**
- *  функция получает формы после чего производится взоимодействие с ними
- * @param {*} object 
- */
 function enableValidatuion(object) {
-    const formList = array.from(document.querySelectorAll(object.formSelector));
+    const formList = Array.from(document.querySelectorAll(object.formSelector));
 
     formList.forEach(item => {
-        item.addEventListener('submit', disableSubmit);
-
+        item.addEventListener('submit', (e) => {
+            e.preventDefault();
+        });
+        item.addEventListener('input', () => {
+            toggleButton(item, object);
+        })
         addInpuiListeners(item, object);
-        toggleButton(item.object);
+        toggleButton(item, object);
     })
-}
+};
 
 
-
-/**
- * Обработать ввод в input
- * @param {*} event событие input
- * @param {*} object объект
- */
 function handleFormInput(event, object) {
     const input = event.target;
     const inputId = input.id;
     const errorElement = document.querySelector(`#${inputId}-error`);
-
 
     if (input.validity.valid) {
         input.classList.remove(object.inputErrorClass);
@@ -48,12 +36,14 @@ function handleFormInput(event, object) {
         input.classList.add(object.inputErrorClass);
         errorElement.textContent = input.validationMessage;
     }
-}
+};
 
 
 function toggleButton(formList, object) {
-    const buttonSubmit = formList.querySelector(object.buttonClass)
-
+    const buttonSubmit = formList.querySelector(object.buttonSelector);
+    const isFormValid = formList.checkValidity();
+    buttonSubmit.disabled = !isFormValid;
+    buttonSubmit.classList.toggle(object.buttonDisabledClass, !isFormValid);
 }
 
 function addInpuiListeners(formList, object) {
@@ -62,15 +52,16 @@ function addInpuiListeners(formList, object) {
     inputList.forEach(function (item) {
         item.addEventListener('input', (event) => {
             handleFormInput(event, object)
-
         });
 
-    });
-}
 
+    });
+};
 
 
 enableValidatuion(formValidationConfig);
+
+
 
 
 
