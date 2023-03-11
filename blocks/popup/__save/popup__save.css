@@ -9,6 +9,7 @@
     cursor: pointer;
     border: none;
     outline: none;
+    transition: opacity .8s;
 
 }
 
