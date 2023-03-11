@@ -1,7 +1,7 @@
 .popup__input {
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 0 0 13px 0;
+  padding-bottom: 6px;
   outline: none;
   font-size: 14px;
   line-height: 17px;
@@ -9,9 +9,8 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  /* margin-bottom: 30px; */
-}
 
+}
 
 
 .popup__input:nth-child(2) {
@@ -23,27 +22,3 @@
     margin-bottom: 45px;
   }
 }
-
-
-/* .popup__input {
-  padding-bottom: 13px;
-  margin-bottom: 30px;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  font-size: 14px;
-  line-height: 17px;
-}
-
-
-.popup__input:nth-child(2) {
-  margin-bottom: 42px;
-}
-
-
-
-@media (max-width: 550px) {
-  .popup__input:nth-child(2) {
-    margin-bottom: 45px;
-  }
-} */
