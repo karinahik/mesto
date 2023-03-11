@@ -4,11 +4,13 @@
     font-size: 18px;
     line-height: 22px;
     text-align: center;
+    margin-top: 30px;
     color: #FFFFFF;
     padding: 14px;
     cursor: pointer;
     border: none;
     outline: none;
+    transition: opacity .8s;
 
 }
 

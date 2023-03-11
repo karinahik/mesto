@@ -11,21 +11,41 @@ const addCardButton = document.querySelector('.profile__button-plus');
 const addCardForm = document.querySelector("#card__form");
 const popupImg = document.querySelector('.popup__img');
 const popupType = document.querySelector('.popup_type_img');
+const allPopups = document.querySelectorAll('.popup');
 
 
 //  Open popup 
 const openPopup = (popup) => {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', handlerEscClose)
+
 
 };
 
 //  Close popup
 const closePopup = (popup) => {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', handlerEscClose)
+
 
 };
 
+function handlerEscClose(e) {
+  if (e.key === 'Escape') {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
 
+}
+
+allPopups.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    if (e.target.classList.contains('popup') || e.target.classList.contains('popup__close')) {
+      closePopup(item);
+
+    }
+  });
+});
 
 
 const updateProfileData = (event) => {
@@ -165,3 +185,8 @@ addCardForm.addEventListener('submit', (e) => {
   closePopup(addCardPopup);
 
 });
+
+
+
+
+

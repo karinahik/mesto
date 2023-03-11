@@ -65,4 +65,10 @@
 @import url(../blocks/popup/__card-photo/popup__card-photo.css);
 @import url(../blocks/popup/__figure/popup__figure.css);
 @import url(../blocks/popup/__header-img/popup__header-img.css);
-@import url(../blocks/popup/_type_img/popup_type_img.css)
+@import url(../blocks/popup/_type_img/popup_type_img.css);
+
+
+
+@import url(../blocks/popup/__input-error/popup__input-error.css);
+@import url(../blocks/popup/__form-field/popup__form-field.css);
+@import url(../blocks/popup/_inactive/popup__save-button_inactive.css);

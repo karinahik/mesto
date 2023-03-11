@@ -65,6 +65,7 @@
         <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
         <h2 class="popup__header">Редактировать профиль</h2>
         <form action="post" class="popup__form" id="profile__form" name="popup-form" novalidate>
+       <label class="popup__form-field">
           <input
             class="popup__input"
             minlength="2"
@@ -75,6 +76,10 @@
             placeholder="Имя"
             required
           >
+           <span id="input-name-error" class="popup__input-error input-name-error"></span>
+       </label>
+
+       <label class="popup__form-field">
           <input
             class="popup__input"
             minlength="2"
@@ -85,6 +90,8 @@
             placeholder="О себе"
             required
           >
+          <span id="input-about-error" class="popup__input-error about-input-error"></span>
+       </label>
           <button type="submit" class="popup__save">Сохранить</button>
         </form>
       </div>
@@ -96,9 +103,10 @@
         <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
         <h2 class="popup__header">Новое место</h2>
         <form  action="post" class="popup__form" id="card__form" name="popup__add-card" novalidate>
+        <label class="popup__form-field">
           <input
           class="popup__input"
-          minlength="1"
+          minlength="2"
           maxlength="30"
           type="text"
           name ="mesto"
@@ -106,7 +114,10 @@
           placeholder="Название"
           required
           >
-          <input
+          <span id="input-mesto-error" class="popup__input-error mesto-input-error"></span>
+        </label>
+       <label class="popup__form-field"> 
+        <input
           class="popup__input"
           type="url"
           name="link"
@@ -114,11 +125,15 @@
           id="input-link"
           required
           >
+         <span id="input-link-error" class="popup__input-error url-input-error"></span>
+        </label>
+
           <button type="submit" class="popup__save">Создать</button>
         </form>
       </div>
     </section>
 
+ <script src="./script/validate.js"></script>   
  <script src="./script/index.js"></script> 
 </body>
 </html>
