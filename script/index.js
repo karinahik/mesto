@@ -18,8 +18,9 @@ const templateCard = document.querySelector('#card__template');
 const cardsContainer = document.querySelector(".cards");
 const cardPhoto = document.querySelector('.popup__card-photo');
 const headerImg = document.querySelector('.popup__header-img');
-const inputValue = document.querySelector("#input-link").value;
-const inputMesto = document.querySelector("#input-mesto").value;
+const inputValue = document.querySelector("#input-link");
+const inputMesto = document.querySelector("#input-mesto");
+
 
 
 
@@ -74,8 +75,11 @@ const updateProfileData = (event) => {
 closeButtons.forEach((btn) => btn.addEventListener("click", evt => closePopup(evt.target.closest('.popup'))));
 
 // popup Open Buttons
-editButton.addEventListener('click', () =>
-  openPopup(profilePopup));
+editButton.addEventListener('click', () => {
+  inputName.value = username.textContent;
+  inputAbout.value = aboutUser.textContent;
+  openPopup(profilePopup);
+});
 addCardButton.addEventListener('click', () => {
   openPopup(addCardPopup);
   addCardForm.reset();
@@ -84,6 +88,7 @@ addCardButton.addEventListener('click', () => {
 
 
 profileForm.addEventListener('submit', updateProfileData);
+
 
 
 
@@ -172,8 +177,8 @@ const createCard = (item) => {
 
 const addNewCard = () => {
   const item = {
-    name: inputMesto,
-    link: inputValue,
+    name: inputMesto.value,
+    link: inputValue.value,
   }
   renderCard(item);
 
