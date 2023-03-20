@@ -90,6 +90,7 @@ editButton.addEventListener('click', () => {
 addCardButton.addEventListener('click', () => {
   openPopup(addCardPopup);
   addCardForm.reset();
+  popupAddCardValidation.disableSubmitButton()
 });
 
 profileForm.addEventListener('submit', updateProfileData);
@@ -130,7 +131,7 @@ addCardForm.addEventListener("submit", (e) => {
   const link = inputValue.value
   const newCard = createCard({ name, link })
   if (newCard) renderCard(newCard, cardsContainer)
-  popupAddCardValidation.disableSubmitButton()
+
   closePopup(addCardPopup)
 })
 
