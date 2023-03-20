@@ -6,14 +6,7 @@
     top: calc(100% + 2px);
     left: 0;
     transition: 0.3s;
-
-}
-
-.error {
     opacity: 1;
-}
-
-.error {
     border-bottom-color: #FF0000;
 
 }
