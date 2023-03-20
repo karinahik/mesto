@@ -1,142 +1,116 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
-    <title>MESTO</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>MESTO</title>
 </head>
+
 <body class="page">
   <header class="header">
-      <img class="header__logo" src="./images/Vector.svg" alt="логотип">
-</header>
-    <main class="main">
-         <section class="profile">
-            <div class="profile__cover">
-                <img class="profile__avatar-photo" src="./images/image.png" alt="аватарка">
-              <div class="profile__info">
-                <div class="profile__position">
-                  <h1 class="profile__title">Жак-Ив Кусто</h1>
-                  <button class="profile__button-edit" type="button">
-                  <img src="./images/Edit.svg" alt="кнопка" class="profile__button-image">  
-                  </button>
-              </div>
-                  <p class="profile__text">Исследователь океана</p>
-              </div>
-            </div>
-            <button class="profile__button-plus" type="button">
-              <img class="profile__button-img" src="./images/plus.svg" alt="Плюс">
+    <img class="header__logo" src="./images/Vector.svg" alt="логотип">
+  </header>
+  <main class="main">
+    <section class="profile">
+      <div class="profile__cover">
+        <img class="profile__avatar-photo" src="./images/image.png" alt="аватарка">
+        <div class="profile__info">
+          <div class="profile__position">
+            <h1 class="profile__title">Жак-Ив Кусто</h1>
+            <button class="profile__button-edit" type="button">
+              <img src="./images/Edit.svg" alt="кнопка" class="profile__button-image">
             </button>
-          </section>
-
-         <section class="elements">
-          <ul class="cards"></ul>
-         </section>
-        </main>
-
-        <template id="card__template">
-             <li class="card">
-                <img class="card__img" src="#" alt="Изображение">
-                <button class="card__delete" type="button"><img class="card__delete-img" src="./images/Trash.svg" alt="Удалить"></button>
-                <div class="card__description">
-                <h3 class="card__text"></h3>
-                <button class="card__like-button"  type="button"><img class="card__like" src="./images/Group.svg" alt="Изображение"></button>
-              </div>
-               </li>
-        </template>
-        
-        <footer class="footer">
-            <p class="footer__copyright">© 2020 Mesto Russia</p>
-    </footer>
-    
-<div class="popup popup_type_img">
-  <section class="popup__img-container">
-  <div class="popup__figure">
-    <img class="popup__card-photo" src="#"  alt="Изображение карточки">
-    <h2 class="popup__header-img"></h2>
-  </div>
-  <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
-  </section>
-  </div>
-
-    <section class="popup popup_type-profile">
-      <div class="popup__container">
-        <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
-        <h2 class="popup__header">Редактировать профиль</h2>
-        <form action="post" class="popup__form" id="profile__form" name="popup-form" novalidate>
-       <label class="popup__form-field">
-          <input
-            class="popup__input"
-            minlength="2"
-            maxlength="40"
-            type="text"
-            name="fullname"
-            id="input-name"
-            placeholder="Имя"
-            required
-          >
-           <span id="input-name-error" class="popup__input-error input-name-error"></span>
-       </label>
-
-       <label class="popup__form-field">
-          <input
-            class="popup__input"
-            minlength="2"
-            maxlength="200"
-            type="text"
-            name="about"
-            id="input-about"
-            placeholder="О себе"
-            required
-          >
-          <span id="input-about-error" class="popup__input-error about-input-error"></span>
-       </label>
-          <button type="submit" class="popup__save">Сохранить</button>
-        </form>
+          </div>
+          <p class="profile__text">Исследователь океана</p>
+        </div>
       </div>
+      <button class="profile__button-plus" type="button">
+        <img class="profile__button-img" src="./images/plus.svg" alt="Плюс">
+      </button>
     </section>
 
-    
-    <section class="popup popup_type_add-card">
-      <div class="popup__container">
-        <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg" alt="закрыть"></button>
-        <h2 class="popup__header">Новое место</h2>
-        <form  action="post" class="popup__form" id="card__form" name="popup__add-card" novalidate>
+    <section class="elements">
+      <ul class="cards"></ul>
+    </section>
+  </main>
+
+  <template id="card__template" class="card__template">
+    <li class="card">
+      <img class="card__img" src="#" alt="Изображение городов России">
+      <button class="card__delete" type="button"><img class="card__delete-img" src="./images/Trash.svg"
+          alt="Удалить"></button>
+      <div class="card__description">
+        <h3 class="card__text"></h3>
+        <button class="card__like-button" type="button"><img class="card__like" src="./images/Group.svg"
+            alt="Изображение"></button>
+      </div>
+    </li>
+  </template>
+
+  <footer class="footer">
+    <p class="footer__copyright">© 2020 Mesto Russia</p>
+  </footer>
+
+  <div class="popup popup_type_img">
+    <section class="popup__img-container">
+      <div class="popup__figure">
+        <img class="popup__card-photo" src="#" alt="Изображение карточки">
+        <h2 class="popup__header-img"></h2>
+      </div>
+      <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg"
+          alt="закрыть"></button>
+    </section>
+  </div>
+
+  <section class="popup popup_type-profile">
+    <div class="popup__container">
+      <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg"
+          alt="закрыть"></button>
+      <h2 class="popup__header">Редактировать профиль</h2>
+      <form action="post" class="popup__form" id="profile__form" name="popup-form" novalidate>
         <label class="popup__form-field">
-          <input
-          class="popup__input"
-          minlength="2"
-          maxlength="30"
-          type="text"
-          name ="mesto"
-          id="input-mesto"
-          placeholder="Название"
-          required
-          >
-          <span id="input-mesto-error" class="popup__input-error mesto-input-error"></span>
-        </label>
-       <label class="popup__form-field"> 
-        <input
-          class="popup__input"
-          type="url"
-          name="link"
-          placeholder="Ссылка на картинку"
-          id="input-link"
-          required
-          >
-         <span id="input-link-error" class="popup__input-error url-input-error"></span>
+          <input class="popup__input" minlength="2" maxlength="40" type="text" name="fullname" id="inputName"
+            placeholder="Имя" required>
+          <span class="inputName-error error"></span>
         </label>
 
-          <button type="submit" class="popup__save">Создать</button>
-        </form>
-      </div>
-    </section>
+        <label class="popup__form-field">
+          <input class="popup__input" minlength="2" maxlength="200" type="text" name="about" id="inputAbout"
+            placeholder="О себе" required>
+          <span class="inputAbout-error error"></span>
+        </label>
+        <button type="submit" class="popup__save popup__save_disabled">Сохранить</button>
+      </form>
+    </div>
+  </section>
 
- <script src="./script/validate.js"></script>   
- <script src="./script/index.js"></script> 
+
+  <section class="popup popup_type_add-card">
+    <div class="popup__container">
+      <button class="popup__close" type="button"><img class="popup__close-img" src="./images/CloseIcon.svg"
+          alt="закрыть"></button>
+      <h2 class="popup__header">Новое место</h2>
+      <form action="post" class="popup__form" id="card__form" name="popup__add-card" novalidate>
+        <label class="popup__form-field">
+          <input class="popup__input" minlength="2" maxlength="30" type="text" name="name" id="inputMesto"
+            placeholder="Название" required>
+          <span class="inputMesto-error error"></span>
+        </label>
+        <label class="popup__form-field">
+          <input class="popup__input" type="url" name="link" placeholder="Ссылка на картинку" id="inputLink" required>
+          <span class="inputLink-error error"></span>
+        </label>
+
+        <button type="submit" class="popup__save">Создать</button>
+      </form>
+    </div>
+  </section>
+
+  <script type="module" src="./scripts/index.js"></script>
+
 </body>
+
 </html>
-
-
-
