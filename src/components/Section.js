@@ -3,6 +3,7 @@ export default class Section {
         this._renderer = renderer
         this._container = document.querySelector(containerSelector)
     }
+
     addItem = (item) => {
         this._container.prepend(item)
     }
@@ -12,5 +13,6 @@ export default class Section {
             return this._renderer(item)
         })
     }
+
 
 }

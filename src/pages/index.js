@@ -5,11 +5,11 @@ import './index.css';
 import { validationConfig } from '../utils/validationConfig.js';
 import { initialCards } from '../utils/initialCards.js';
 import {
-  editButton,
-  addCardButton,
+  buttonEditProfile,
+  buttonAddCard,
   formEditProfile,
-  editFullName,
-  editAboutInput,
+  fullNameEdit,
+  aboutInputEdit,
   formAddProfile,
 } from '../utils/constants.js';
 
@@ -44,8 +44,8 @@ const userInfo = new UserInfo({
 function openEditProfile() {
   const { title, subtitle } = userInfo.getUserInfo()
   console.log(title)
-  editFullName.value = title
-  editAboutInput.value = subtitle
+  fullNameEdit.value = title
+  aboutInputEdit.value = subtitle
   formEditValidator.disableSubmitButton()
   classEditPopup.open()
 }
@@ -93,12 +93,12 @@ const formCardValidator = new FormValidator(validationConfig, formAddProfile)
 formCardValidator.enableValidation()
 
 //кнопки открытия попапов
-addCardButton.addEventListener("click", () => popupAddCardProfile())
-editButton.addEventListener("click", () => openEditProfile())
+buttonAddCard.addEventListener("click", () => popupAddCardProfile())
+buttonEditProfile.addEventListener("click", () => openEditProfile())
 
 
 
-cardSection.renderItems(initialCards.reverse())
+cardSection.renderItems(initialCards)
 
 
 

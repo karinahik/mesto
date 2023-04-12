@@ -1,6 +1,6 @@
 // кнопки открытия попапов
-const editButton = document.querySelector('.profile__button-edit');
-const addCardButton = document.querySelector('.profile__button-plus');
+const buttonEditProfile = document.querySelector('.profile__button-edit');
+const buttonAddCard = document.querySelector('.profile__button-plus');
 
 //находим форму редактирования по ее name
 const formEditProfile = document.forms.popupForm
@@ -9,15 +9,15 @@ const formEditProfile = document.forms.popupForm
 const formAddProfile = document.forms.popupAdd
 
 //находим поля в форме редактирования по их name
-const editFullName = formEditProfile.elements.fullname
-const editAboutInput = formEditProfile.elements.about
+const fullNameEdit = formEditProfile.elements.fullname
+const aboutInputEdit = formEditProfile.elements.about
 
 
 export {
-    editButton,
-    addCardButton,
+    buttonEditProfile,
+    buttonAddCard,
     formEditProfile,
-    editFullName,
-    editAboutInput,
+    fullNameEdit,
+    aboutInputEdit,
     formAddProfile,
 }
