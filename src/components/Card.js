@@ -46,6 +46,7 @@ export default class Card {
 
     remove() {
         this._cardElement.remove()
+        this._cardElement = null
     }
 
     generateCard = () => {
