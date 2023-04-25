@@ -9,7 +9,7 @@ export default class UserInfo {
         return {
             name: this._name.textContent,
             about: this._about.textContent,
-            avatar: this._avatar.textContent,
+            avatar: this._avatar.src,
         }
     }
 
@@ -23,7 +23,7 @@ export default class UserInfo {
         }
 
         if (data.avatar) {
-            this._avatar.textContent = data.avatar
+            this._avatar.src = data.avatar
         }
     }
 }

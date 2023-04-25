@@ -76,7 +76,6 @@ async function handleSubmitFormEditProfile(data) {
   try {
     const userProfile = await api.editProfileUserInfo(data)
     user.setUserInfo(userProfile)
-    popupEdit.close()
   } catch (error) {
     return console.log(`Ошибка: ${error}`)
   }
@@ -86,9 +85,7 @@ async function handleSubmitFormEditProfile(data) {
 async function handleSubmitFormUpdateAvatar(data) {
   try {
     const userProfile = await api.updateProfileUserAvatar(data)
-    user.setUserInfo(userProfile)
-    avatarProfile.src = userProfile.avatar
-    popupAvatar.close()
+    user.setUserInfo(userProfile, avatarProfile)
   } catch (error) {
     return console.log(`Ошибка: ${error}`)
   }
@@ -99,7 +96,6 @@ async function handleSubmitFormAddCard(data) {
   try {
     const newCard = await api.getNewCard(data)
     cardList.addItem(createCard(newCard))
-    popupAdd.close()
   } catch (error) {
     return console.log(`Ошибка: ${error}`)
   }
@@ -143,7 +139,6 @@ profileUpdateAvatar.addEventListener(
   "click",
   () => {
     popupAvatar.open()
-    popupAvatar.setInputValue(user.getUserInfo())
     validatorFormUpdateAvatar.disableSubmitButton()
   },
   false
@@ -218,10 +213,9 @@ const api = new Api({
 // Отрисовка карточек с сервера + отрисовка данных пользователя
 Promise.all([api.getRealUserInfo(), api.getCards()])
   .then(([userProfile, cards]) => {
-    user.setUserInfo(userProfile)
+    user.setUserInfo(userProfile, avatarProfile)
     userId = userProfile._id
-    avatarProfile.src = userProfile.avatar
-    cardList.renderItems(cards)
+    cardList.renderItems(cards.reverse())
   })
 
   .catch((error) => console.log(`Ошибка: ${error}`))
